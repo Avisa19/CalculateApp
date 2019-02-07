@@ -13,12 +13,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var displayLabel: UILabel!
     private var isFinishedTypingNumber : Bool = true
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-    }
-    
-    
+  
     
     
 
@@ -26,6 +21,13 @@ class ViewController: UIViewController {
         //What should happen when non-number button pressed
         
         isFinishedTypingNumber = true
+        
+        guard let number = Double(displayLabel.text!) else { fatalError("Cannot convert display label text to double.") }
+        
+        if let calcMethod = sender.currentTitle {
+            
+            
+        }
         
     }
     
@@ -46,6 +48,15 @@ class ViewController: UIViewController {
                 isFinishedTypingNumber = false
                 
             } else {
+                if numValue == "." {
+                    guard let currentDisplayValue = Double(displayLabel.text!) else { fatalError("Cannot convert display label text to double.") }
+                    
+                    let isInt = floor(currentDisplayValue) == currentDisplayValue
+                    
+                    if !isInt {
+                        return
+                    }
+                }
                 
                 displayLabel.text = displayLabel.text! + numValue
             
