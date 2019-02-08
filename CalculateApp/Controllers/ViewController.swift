@@ -21,28 +21,26 @@ class ViewController: UIViewController {
             displayLabel.text = String(newValue)
         }
     }
-  
-    
+  //Acces level.
+    private var calculator = CalculatorLogic()
     
 
     @IBAction func calcButtonPressed(_ sender: UIButton) {
         //What should happen when non-number button pressed
         
         isFinishedTypingNumber = true
-        
-       
+        calculator.setNumber(dispalyValue)
         
         if let calcMethod = sender.currentTitle {
-            if calcMethod == "+/-" {
-                displayLabel.text = String(dispalyValue * -1)
-            } else if calcMethod == "AC" {
-                displayLabel.text = "0"
-            } else if calcMethod == "%" {
-                displayLabel.text = String(dispalyValue / 100)
+            
+            // At the same time we give value we create Object too.
+            // when we have optional intializer , we do not have to give it value when we create object.
+            if let result = calculator.calculate(symbol: calcMethod) {
+                dispalyValue = result
+                
             }
             
         }
-        
     }
     
     

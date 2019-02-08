@@ -12,6 +12,7 @@
 		8B8EFC80220C36DA006F2C86 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B8EFC7E220C36DA006F2C86 /* Main.storyboard */; };
 		8B8EFC82220C36E2006F2C86 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8B8EFC81220C36E2006F2C86 /* Assets.xcassets */; };
 		8B8EFC85220C36E2006F2C86 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B8EFC83220C36E2006F2C86 /* LaunchScreen.storyboard */; };
+		8BEE3E78220CF05C0011C169 /* CalculatorLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BEE3E77220CF05C0011C169 /* CalculatorLogic.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		8B8EFC81220C36E2006F2C86 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8B8EFC84220C36E2006F2C86 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8B8EFC86220C36E2006F2C86 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8BEE3E77220CF05C0011C169 /* CalculatorLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorLogic.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,7 +59,7 @@
 				8B8EFC7A220C36DA006F2C86 /* AppDelegate.swift */,
 				8B8EFC8C220C3735006F2C86 /* Controllers */,
 				8B8EFC8D220C3746006F2C86 /* Views */,
-				8B8EFC8F220C3763006F2C86 /* Models */,
+				8BEE3E76220CF03C0011C169 /* Model */,
 				8B8EFC8E220C374E006F2C86 /* Supporting Files */,
 				8B8EFC83220C36E2006F2C86 /* LaunchScreen.storyboard */,
 				8B8EFC86220C36E2006F2C86 /* Info.plist */,
@@ -89,11 +91,12 @@
 			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		8B8EFC8F220C3763006F2C86 /* Models */ = {
+		8BEE3E76220CF03C0011C169 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				8BEE3E77220CF05C0011C169 /* CalculatorLogic.swift */,
 			);
-			path = Models;
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -169,6 +172,7 @@
 			files = (
 				8B8EFC7D220C36DA006F2C86 /* ViewController.swift in Sources */,
 				8B8EFC7B220C36DA006F2C86 /* AppDelegate.swift in Sources */,
+				8BEE3E78220CF05C0011C169 /* CalculatorLogic.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
